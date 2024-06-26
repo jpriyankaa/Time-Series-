@@ -42,3 +42,5 @@ Time resampling techniques are applied to the dataset to facilitate analysis at 
 
 ### Conclusion
 The project effectively demonstrates the use of EDA and time series analysis techniques to understand and visualize Tesla’s stock performance over time. By leveraging Python libraries and financial data, meaningful insights are derived, which can be valuable for investors and analysts in making informed decisions.
+
+## Thank you 😀
