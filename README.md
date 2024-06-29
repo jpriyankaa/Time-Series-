@@ -40,6 +40,9 @@ Time resampling techniques are applied to the dataset to facilitate analysis at 
 - The highest stock price recorded was in 2021, reflecting Tesla’s peak market performance.
 - Resampling the data provides insights into Tesla’s performance at different time intervals, aiding in understanding long-term trends and quarterly variations.
 
+### Conclusion
+The project effectively demonstrates the use of EDA and time series analysis techniques to understand and visualize Tesla’s stock performance over time. By leveraging Python libraries and financial data, meaningful insights are derived, which can be valuable for investors and analysts in making informed decisions.
+
   
 
 # Time Series Analysis of Nvidia Stock and Airline Passengers Data
@@ -78,6 +81,10 @@ Time resampling techniques are applied to the dataset to facilitate analysis at 
 - **ADF Test for Stationarity**: Conducted to check if the time series is stationary. Stationarity is essential for accurate modeling in time series analysis.
 - **Differencing for Stationarity**: Applied to make the time series data stationary by removing trends and seasonality.
 
+### Autocorrelation and Partial Autocorrelation
+- **Autocorrelation Function (ACF)**: Measures the correlation between the time series and its lagged values. Plotted to identify the extent of correlation with previous time steps.
+- **Partial Autocorrelation Function (PACF)**: Measures the correlation between the time series and its lagged values while controlling for the values of the time steps in between. Plotted to identify the direct effect of previous time steps.
+
 ## 6. Modeling
 ### ARIMA Model for Airline Passengers Data
 - **Train-Test Split**: The data was divided into training and testing sets to evaluate the performance of the ARIMA model.
@@ -98,6 +105,10 @@ Time resampling techniques are applied to the dataset to facilitate analysis at 
 ### Differencing
 - A technique used to make a non-stationary time series stationary by subtracting the previous observation from the current observation. It helps remove trends and seasonality from the data.
 
+### Autocorrelation and Partial Autocorrelation
+- **Autocorrelation Function (ACF)**: A measure of the correlation between a time series and its lagged values. The ACF plot helps in identifying the extent of correlation with previous time steps and can guide in choosing the appropriate model parameters.
+- **Partial Autocorrelation Function (PACF)**: A measure of the correlation between a time series and its lagged values while controlling for the values of the time steps in between. The PACF plot helps in identifying the direct effect of previous time steps and is used to determine the order of the autoregressive part of the model.
+
 ### ARIMA Model
 - ARIMA (AutoRegressive Integrated Moving Average) is a class of models that explains a given time series based on its own past values (autoregressive part), the differenced values (integrated part), and a moving average model applied to the lagged forecast errors (moving average part).
 
@@ -108,7 +119,7 @@ Time resampling techniques are applied to the dataset to facilitate analysis at 
 - A statistical test used to determine if a time series is stationary. It tests the null hypothesis that a unit root is present in a time series sample. A lower p-value indicates that the null hypothesis can be rejected, suggesting the time series is stationary.
 
 ## 8. Data Visualization
-Visualizations were used extensively to understand data trends and patterns. Examples include:
+- Visualizations were used extensively to understand data trends and patterns. Examples include:
 - Line plots to visualize stock prices over time.
 - Comparison of actual vs. predicted values in time series forecasting.
 
@@ -120,8 +131,5 @@ Visualizations were used extensively to understand data trends and patterns. Exa
 
 ## 11. Conclusion
 - This project demonstrated the application of various time series analysis techniques on Nvidia stock data and airline passengers data. Techniques such as moving averages, exponential moving averages, differencing, ARIMA, and SARIMA models were used to analyze and forecast the time series data. The results provide insights into the trends and patterns within the data, which can be useful for making informed decisions in finance and transportation sectors.
-
-### Conclusion
-The project effectively demonstrates the use of EDA and time series analysis techniques to understand and visualize Tesla’s stock performance over time. By leveraging Python libraries and financial data, meaningful insights are derived, which can be valuable for investors and analysts in making informed decisions.
 
 ## Thank you 😀
