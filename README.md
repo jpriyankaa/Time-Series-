@@ -40,6 +40,87 @@ Time resampling techniques are applied to the dataset to facilitate analysis at 
 - The highest stock price recorded was in 2021, reflecting Tesla’s peak market performance.
 - Resampling the data provides insights into Tesla’s performance at different time intervals, aiding in understanding long-term trends and quarterly variations.
 
+  
+
+# Time Series Analysis of Nvidia Stock and Airline Passengers Data
+
+## 1. Introduction
+- This project involves time series analysis of two datasets: Nvidia (NVDA) stock prices and airline passengers data. The aim is to perform various statistical analyses and model predictions using techniques like moving averages, exponential moving averages, ARIMA, and SARIMA models.
+
+## 2. Datasets
+- **Nvidia Stock Data**: Historical stock prices for Nvidia Corporation fetched using the `yfinance` library.
+- **Airline Passengers Data**: Monthly totals of international airline passengers from 1949 to 1960.
+
+## 3. Libraries Used
+- `pandas`: Data manipulation and analysis.
+- `numpy`: Numerical operations.
+- `matplotlib`: Data visualization.
+- `statsmodels`: Statistical modeling.
+- `yfinance`: Fetching financial data.
+
+## 4. Data Loading and Preprocessing
+### Nvidia Stock Data
+- Data for Nvidia stock prices was downloaded and loaded into a DataFrame. 
+- The data was inspected and cleaned for any missing values.
+
+### Airline Passengers Data
+- Data for airline passengers was read from a CSV file.
+- Missing values were handled and the 'Month' column was converted to datetime format for proper time series analysis.
+
+## 5. Exploratory Data Analysis (EDA)
+### Nvidia Stock Data
+- **Plotting Open Prices**: The opening prices of Nvidia stocks were plotted to observe the trend over time.
+- **Simple Moving Averages (SMA)**: Calculated and plotted to smooth out short-term fluctuations and highlight longer-term trends.
+- **Exponential Moving Averages (EMA)**: Calculated and plotted to give more weight to recent prices, thereby capturing more recent trends more effectively.
+
+### Airline Passengers Data
+- **Plotting Passengers Data**: The data was plotted to visualize the monthly totals of international airline passengers.
+- **ADF Test for Stationarity**: Conducted to check if the time series is stationary. Stationarity is essential for accurate modeling in time series analysis.
+- **Differencing for Stationarity**: Applied to make the time series data stationary by removing trends and seasonality.
+
+## 6. Modeling
+### ARIMA Model for Airline Passengers Data
+- **Train-Test Split**: The data was divided into training and testing sets to evaluate the performance of the ARIMA model.
+- **ARIMA Model Creation and Fitting**: An ARIMA model was fitted to the training data and used to make predictions.
+
+### SARIMA Model for Airline Passengers Data
+- **Seasonality Consideration**: The airline passengers data shows clear seasonal patterns. To model this, a Seasonal ARIMA (SARIMA) model was used.
+- **SARIMA Model Creation and Fitting**: A SARIMA model was fitted to the training data and used to make predictions. This model incorporates both seasonal and non-seasonal factors in the time series data.
+
+## 7. Definitions of Important Models and Concepts
+### Moving Averages (MA)
+- **Simple Moving Average (SMA)**: An average of the data points within a certain window. It smooths out short-term fluctuations and highlights longer-term trends or cycles.
+- **Exponential Moving Average (EMA)**: A type of moving average that places a greater weight and significance on the most recent data points. This makes it more responsive to recent price changes compared to SMA.
+
+### Stationarity
+- A time series is said to be stationary if its statistical properties such as mean, variance, and autocorrelation are all constant over time. Stationarity is important for time series modeling because many statistical methods assume or require a stationary time series.
+
+### Differencing
+- A technique used to make a non-stationary time series stationary by subtracting the previous observation from the current observation. It helps remove trends and seasonality from the data.
+
+### ARIMA Model
+- ARIMA (AutoRegressive Integrated Moving Average) is a class of models that explains a given time series based on its own past values (autoregressive part), the differenced values (integrated part), and a moving average model applied to the lagged forecast errors (moving average part).
+
+### SARIMA Model
+- SARIMA (Seasonal AutoRegressive Integrated Moving Average) extends the ARIMA model by explicitly modeling seasonal effects. It incorporates seasonal autoregressive (SAR), seasonal differencing (SD), and seasonal moving average (SMA) components along with non-seasonal components. This model is particularly useful for time series data with strong seasonal patterns.
+
+### ADF Test (Augmented Dickey-Fuller Test)
+- A statistical test used to determine if a time series is stationary. It tests the null hypothesis that a unit root is present in a time series sample. A lower p-value indicates that the null hypothesis can be rejected, suggesting the time series is stationary.
+
+## 8. Data Visualization
+Visualizations were used extensively to understand data trends and patterns. Examples include:
+- Line plots to visualize stock prices over time.
+- Comparison of actual vs. predicted values in time series forecasting.
+
+## 9. Model Evaluation Metrics
+- To evaluate the performance of the time series models, metrics such as Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) were used. These metrics help quantify the accuracy of the predictions.
+
+## 10. Hyperparameter Tuning
+- For both ARIMA and SARIMA models, parameters such as p (autoregressive order), d (differencing order), q (moving average order), P (seasonal autoregressive order), D (seasonal differencing order), Q (seasonal moving average order), and m (seasonal period) were tuned to achieve the best model fit.
+
+## 11. Conclusion
+- This project demonstrated the application of various time series analysis techniques on Nvidia stock data and airline passengers data. Techniques such as moving averages, exponential moving averages, differencing, ARIMA, and SARIMA models were used to analyze and forecast the time series data. The results provide insights into the trends and patterns within the data, which can be useful for making informed decisions in finance and transportation sectors.
+
 ### Conclusion
 The project effectively demonstrates the use of EDA and time series analysis techniques to understand and visualize Tesla’s stock performance over time. By leveraging Python libraries and financial data, meaningful insights are derived, which can be valuable for investors and analysts in making informed decisions.
 
